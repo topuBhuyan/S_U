@@ -1,0 +1,21 @@
+ What is Polymorphism?
+Polymorphism শব্দটি এসেছে গ্রিক থেকে:
+
+Poly = many, morph = forms
+
+Java-তে Polymorphism মানে:
+একটি object বা method একাধিক রূপে ব্যবহার করা যায়।
+
+
+
+ দুই ধরনের Polymorphism:
+ 
+      ধরন	                    নাম	                                   কীভাবে কাজ করে	                                                          উদাহরণ
+Compile-time	Method Overloading	     Compile সময় ঠিক হয় কোন method চলবে	              add(int, int) vs add(double, double)
+Runtime	          Method Overriding	     Run time-এ ঠিক হয় কোন method চলবে                   Dog.sound() vs Cat.sound()
+
+
+Real Life Example
+একটি remote আছে, সেটি TV, AC, Projector চালাতে পারে → Remote object, কাজ ভিন্ন
+একইভাবে Java তে object behave করতে পারে ভিন্নভাবে = Polymorphism!
+
