@@ -1,0 +1,12 @@
+Constructor হলো Java-এর একটি special method, যেটা:
+-> ক্লাসের object তৈরি হওয়ার সময় অটোমেটিক চালু হয়।
+->সাধারণত object-এর initial value সেট করতে ব্যবহৃত হয়।
+->এটি class-এর নামের মতোই হয় এবং return type থাকে না।
+
+
+ Java-তে 3 ধরণের Constructor আছে:
+ 
+Constructor Type	                                           কি করে?	                                                   Example
+✅ Default Constructor                	কোনো parameter নেয় না	                                Student()
+✅ Parameterized Constructor	parameter নিয়ে object initialize করে	            Student(String name)
+✅ Copy Constructor (Custom)	অন্য object এর মান কপি করে	                                Student(Student s)
