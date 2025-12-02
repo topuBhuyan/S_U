@@ -66,7 +66,7 @@ int main() {
     setcolor(RED);
     fillellipse(screenX, screenY, 3, 3);
     
-    outtextxy(0, 0, "Std ID:CSE21022092");
+    outtextxy(0, 0, "Std ID:CSE2202026024");
 
     // Stop & Close
     getch();
