@@ -1,6 +1,3 @@
-// Problem Link: 
-// LCM with Kolmogorov-Smirnov Test
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,23 +10,14 @@ int nextRandomInt(int x, int a, int c, int m)
 
 int main()
 {
-
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-
     int n, a, c, x, m;
     float Dalpha;
 
     cout << "Enter seed value (x0): "; cin >> x;
-    cout << "Enter multiplier (a): ";
-    cin >> a;
-    cout << "Enter increment (c): ";
-    cin >> c;
-    cout << "Enter modulus (m): ";
-    cin >> m;
-    cout << "How many random numbers to generate? ";
-    cin >> n;
+    cout << "Enter multiplier (a): "; cin >> a;
+    cout << "Enter increment (c): "; cin >> c;
+    cout << "Enter modulus (m): "; cin >> m;
+    cout << "How many random numbers to generate? "; cin >> n;
 
     // Arrays for storing values (like K_S_Test.cpp)
     float randomNumbers[1000];
@@ -65,35 +53,35 @@ int main()
     for(i = 1; i <= n; i++) {
         cout << setw(10) << i;
     }
-    cout << endl;
+    cout << '\n';
 
     // Print R(i) - Sorted random numbers
     cout << setw(10) << "R(i)";
     for(i = 0; i < n; i++) {
         cout << setw(10) << fixed << setprecision(4) << randomNumbers[i];
     }
-    cout << endl;
+    cout << '\n';
 
     // Print i/n ratio
     cout << setw(10) << "i/n";
     for(i = 0; i < n; i++) {
         cout << setw(10) << fixed << setprecision(4) << ratio[i];
     }
-    cout << endl;
+    cout << '\n';
 
     // Print D+
     cout << setw(10) << "D+";
     for(i = 0; i < n; i++) {
         cout << setw(10) << fixed << setprecision(4) << Dplus[i];
     }
-    cout << endl;
+    cout << '\n';
 
     // Print D-
     cout << setw(10) << "D-";
     for(i = 0; i < n; i++) {
         cout << setw(10) << fixed << setprecision(4) << Dminus[i];
     }
-    cout << endl;
+    cout << '\n';
 
     // Find D+ max and D- max (like K_S_Test.cpp)
     DplusMax = Dplus[0];
@@ -108,21 +96,20 @@ int main()
         }
     }
 
-    cout << "\nD+ max: " << fixed << setprecision(4) << DplusMax << endl;
-    cout << "D- max: " << fixed << setprecision(4) << DminusMax << endl;
+    cout << "\nD+ max: " << fixed << setprecision(4) << DplusMax << '\n';
+    cout << "D- max: " << fixed << setprecision(4) << DminusMax << '\n';
 
     D = max(DplusMax, DminusMax);
-    cout << "D = max(" << DplusMax << ", " << DminusMax << ") = " << D << endl;
+    cout << "D = max(" << DplusMax << ", " << DminusMax << ") = " << D << '\n';
 
-    cout << "\nEnter the tabulated value (D Alpha): ";
-    cin >> Dalpha;
+    cout << "\nEnter the tabulated value (D Alpha): "; cin >> Dalpha;
 
     if(D < Dalpha) {
-        cout << "\nThe test is accepted." << endl;
-        cout << "Conclusion: The random numbers follow Uniform(0,1) distribution." << endl;
+        cout << "\nThe test is accepted." << '\n';
+        cout << "Conclusion: The random numbers follow Uniform(0,1) distribution." << '\n';
     } else {
-        cout << "\nThe test is rejected." << endl;
-        cout << "Conclusion: The random numbers do NOT follow Uniform(0,1) distribution." << endl;
+        cout << "\nThe test is rejected." << '\n';
+        cout << "Conclusion: The random numbers do NOT follow Uniform(0,1) distribution." << '\n';
     }
 
     return 0;
