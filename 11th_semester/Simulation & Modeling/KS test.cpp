@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <cmath>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -27,8 +24,6 @@ int main() {
 
         cout << randomNum << endl;
     }
-
-    // ===== Problem 2: KS Test =====
 
     // Sort the random numbers
     sort(U.begin(), U.end());
