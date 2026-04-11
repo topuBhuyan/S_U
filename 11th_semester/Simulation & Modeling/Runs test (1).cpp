@@ -2,10 +2,6 @@
 using namespace std;
 
 int main() {
-
-    // -----------------------------
-    // GIVEN VALUES (LCG)
-    // -----------------------------
     long long m = pow(2, 31);
     long long a = 1103515245;
     long long c = 12345;
@@ -17,10 +13,8 @@ int main() {
     long long Xi = X0;
 
     vector<double> R;
-
-    // -----------------------------
+    
     // PROBLEM 1: Generate 40 random numbers
-    // -----------------------------
     cout << "\nGenerated Random Numbers:\n";
 
     for (int i = 0; i < 40; i++) {
@@ -31,9 +25,7 @@ int main() {
         cout << "R[" << i+1 << "] = " << Ri << endl;
     }
 
-    // -----------------------------
     // PROBLEM 2: Runs Test
-    // -----------------------------
 
     // Convert into 0 and 1 (based on 0.5)
     vector<int> seq;
@@ -73,9 +65,7 @@ int main() {
     // Z-score
     double Z = (runs - mean) / std_dev;
 
-    // -----------------------------
     // OUTPUT RESULTS
-    // -----------------------------
     cout << "\n--- Runs Test Result ---\n";
     cout << "n1 (>=0.5): " << n1 << endl;
     cout << "n2 (<0.5): " << n2 << endl;
